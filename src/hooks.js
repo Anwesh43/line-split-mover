@@ -47,6 +47,8 @@ export const useStyle = (w, h, scale) => {
     const hGap = h / 3
     const sf1 = divideScale(sf, 0, 2)
     const sf2 = divideScale(sf, 1, 2)
+    const btnX = w * 0.4
+    const btnY = h * 0.8
     return {
         lineStyle(i) {
             const width = `${size}px`
@@ -56,6 +58,11 @@ export const useStyle = (w, h, scale) => {
             const top = `${h / 2 + y - lineWidth / 2}`
             const background = 'green'
             return {position, left, top, width, height, background}
+        },
+        buttonStyle() {
+            const left = `${btnX}px`
+            const top = `${btnY}px`
+            return {position, left, top}
         }
     }
 }
