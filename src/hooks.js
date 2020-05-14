@@ -37,6 +37,9 @@ export const useDimension = () => {
             }
         }
     })
+    return {
+        w, h
+    }
 }
 
 export const useStyle = (w, h, scale) => {
@@ -55,7 +58,7 @@ export const useStyle = (w, h, scale) => {
             const height = `${lineWidth}px`
             const left = `${(w - size) * sf1}px`
             const y = hGap * sf2 * (1 - 2 * i)
-            const top = `${h / 2 + y - lineWidth / 2}`
+            const top = `${h / 2 + y - lineWidth / 2}px`
             const background = 'green'
             return {position, left, top, width, height, background}
         },
